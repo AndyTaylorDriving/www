@@ -1,25 +1,210 @@
-/* General mobile adjustments */
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+/* Punchier text styling */
+h1, h2, p {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Logo */
+.logo-container img {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.carousel-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.carousel-overlay h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.carousel-overlay p {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* About Us Section */
+#about {
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-content .text {
+    flex: 1;
+    min-width: 300px; /* Set a minimum width for smaller screens */
+    padding: 20px;
+}
+
+.about-content img {
+    flex: 1;
+    min-width: 300px; /* Ensure image adapts for smaller screens */
+    object-fit: cover;
+    object-position: center;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+/* Features Section */
+#features {
+    background-color: #f0f0f0;
+    color: black;
+    display: flex;
+    flex-wrap: wrap; /* Adjust layout for smaller screens */
+    justify-content: center;
+    gap: 50px; /* Reduce gap for small screens */
+    padding: 20px;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    min-width: 250px; /* Ensure responsiveness */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Cookie Banner */
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#cookieBanner.hidden {
+    display: none !important;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+#acceptCookies, #rejectCookies {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#acceptCookies:hover, #rejectCookies:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Mobile adjustments */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Slightly smaller for mobile */
+        font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     p {
         font-size: 1rem;
     }
 
-    /* Logo */
     .logo-container img {
-        max-width: 150px; /* Smaller logo for mobile */
+        max-width: 150px;
     }
 
-    /* Carousel */
     .carousel {
-        height: 250px; /* Adjusted height */
+        height: 250px;
     }
 
     .carousel-overlay h1 {
@@ -34,40 +219,24 @@
         font-size: 1.2rem;
     }
 
-    /* About Us Section */
     .about-content {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center; /* Center text */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .about-content .text, 
+    .about-content .text,
     .about-content img {
-        max-width: 100%; /* Allow content to fit screen */
+        max-width: 100%;
         margin: 10px 0;
     }
 
-    /* Features Section */
     #features {
-        flex-direction: column; /* Stack features vertically */
-        gap: 50px; /* Reduce spacing */
-    }
-
-    .feature {
-        max-width: 90%; /* Adjust width */
+        flex-direction: column;
+        gap: 30px;
     }
 
     .circle {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* Footer */
-    footer {
-        padding: 15px;
-    }
-
-    /* Cookie Banner */
-    .popup {
-        padding: 10px;
+        width: 120px;
+        height: 120px;
     }
 }
