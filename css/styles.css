@@ -1,0 +1,197 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: black; /* Black backing for the header section */
+    color: white; /* Default text color for dark backgrounds */
+}
+
+/* Punchier text styling */
+h1, h2, p {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Logo */
+.logo-container img {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Carousel */
+.carousel {
+    position: relative; /* Enables overlay positioning */
+    width: 100%; /* Full page width */
+    height: 400px; /* Set consistent height */
+    margin: 0;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Overlay */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black filter */
+    display: flex; /* Center content */
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    color: white; /* Text remains white for dark overlay */
+    z-index: 1; /* Ensure it’s above the image */
+    text-align: center; /* Align all text centrally */
+}
+
+.carousel-overlay h1 {
+    font-size: 3rem; /* Make the header text prominent */
+    font-weight: bold;
+    margin: 0 0 15px 0; /* Add space below h1 */
+}
+
+.carousel-overlay h2 {
+    font-size: 2rem; /* Slightly smaller than h1 */
+    margin: 10px 0; /* Add space between h2 elements */
+}
+
+.carousel-overlay p {
+    font-size: 1.5rem; /* Make paragraph text readable */
+    margin: 15px 0; /* Add space below the paragraph */
+}
+
+/* About Us Section */
+#about {
+    background-color: white; /* White background */
+    color: black; /* Change text color to black for visibility */
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-content .text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+/* Features Section */
+#features {
+    background-color: #f0f0f0; /* Light grey background */
+    color: black; /* Change text color to black */
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Initially hide the iframe container */
+.collapsed {
+    display: none;
+}
+
+.expanded {
+    display: block;
+}
+
+/* Cookie Banner Styling */
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#cookieBanner.hidden {
+    display: none !important;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Larger hitbox and improved button appearance */
+#contact-button,
+#acceptCookies,
+#rejectCookies {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#acceptCookies:hover,
+#rejectCookies:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
