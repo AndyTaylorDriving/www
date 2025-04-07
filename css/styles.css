@@ -33,6 +33,24 @@ p {
     display: block;
 }
 
+/* Adjust logo-container styling for mobile */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-container img {
+        margin-bottom: 10px; /* Ensure space between the logo and the text */
+    }
+
+    .logo-container p {
+        margin-top: 10px; /* Add space above the text */
+    }
+}
+
 /* Carousel */
 .carousel {
     position: relative;
