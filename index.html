@@ -20,16 +20,20 @@
         <img src="images/AndyTaylorDrivingTuitionLogo.png" alt="Andy Taylor Driving Tuition Logo">
     </div>
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <img class="carousel-image" src="images/TitleMedia1.png" alt="Title Media 1">
-        <!-- Overlay with Text -->
-        <div class="carousel-overlay">
-            <h1>Welcome to Andy Taylor Driving Tuition</h1>
-            <h2>01603 260487</h2>
-            <h2>07884 158718</h2>
-            <p>Email: andy@andytaylordriving.co.uk</p>
-        </div>
+<!-- Carousel -->
+<div class="carousel">
+    <img class="carousel-image" src="images/TitleMedia1.png" alt="Title Media 1">
+    <!-- Overlay with Text -->
+    <div class="carousel-overlay">
+        <h1>Welcome to Andy Taylor Driving Tuition</h1>
+        <h2>
+            📞 <a href="tel:01603260487">01603 260487</a><br>
+            📱 <a href="tel:07884158718">07884 158718</a><br>
+            📧 <a href="mailto:andy@andytaylordriving.co.uk?subject=Web%20Enquiry&body=Hello%20Andy,%20I%20would%20like%20to%20know%20more%20about...">andy@andytaylordriving.co.uk</a>
+        </h2>
+    </div>
+</div>
+
     </div>
 
     <!-- About Us -->
@@ -82,10 +86,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>📞 01603 260487 | 📱 07884 158718</p>
+        <p>📞 <a href="tel:01603260487">01603 260487</a> | 📱 <a href="tel:07884158718">07884 158718</a></p>
 <p>Email: <a href="mailto:andy@andytaylordriving.co.uk?subject=Web%20Enquiry&body=Hello%20Andy,%20I%20would%20like%20to%20know%20more%20about...">andy@andytaylordriving.co.uk</a></p>
         <p>Hours: Monday - Friday: 8:30am - 4pm | Saturday: 9am - 11am | Sunday: Closed</p>
-        <p>Copyright © 2025 Andy Taylor Driving Tuition - All Rights Reserved.</p>
+<p id="copyright"></p>
+
+<script>
+    const year = new Date().getFullYear();
+    document.getElementById("copyright").innerHTML = `Copyright © ${year} Andy Taylor Driving Tuition - All Rights Reserved.`;
+</script>
+
     </footer>
 </body>
 </html>
