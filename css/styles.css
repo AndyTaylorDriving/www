@@ -33,24 +33,6 @@ p {
     display: block;
 }
 
-/* Adjust logo-container styling for mobile */
-@media screen and (max-width: 768px) {
-    .logo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logo-container img {
-        margin-bottom: 10px; /* Ensure space between the logo and the text */
-    }
-
-    .logo-container p {
-        margin-top: 10px; /* Add space above the text */
-    }
-}
-
 /* Carousel */
 .carousel {
     position: relative;
@@ -175,6 +157,17 @@ footer {
 #acceptCookies:hover, #rejectCookies:hover {
     background-color: #f0f0f0;
     transform: scale(1.05);
+}
+
+/* Hyperlink styling for white links */
+a {
+    color: white; /* Make hyperlinks white for better legibility */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #ccc; /* Optional: Change color on hover for emphasis */
+    text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /* Responsive adjustments for both PC and mobile */
